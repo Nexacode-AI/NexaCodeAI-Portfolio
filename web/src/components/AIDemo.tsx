@@ -72,8 +72,8 @@ function Assistant({
       transition={{ duration: 0.3 }}
       className="flex gap-2.5"
     >
-      <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-indigo-500/20 ring-1 ring-indigo-400/30">
-        <Sparkles className="h-3.5 w-3.5 text-indigo-300" />
+      <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-500/20 ring-1 ring-slate-400/30">
+        <Sparkles className="h-3.5 w-3.5 text-slate-300" />
       </span>
       <div className="min-w-0 flex-1 rounded-2xl rounded-tl-md bg-white/[0.04] px-4 py-3 ring-1 ring-white/10">
         <p className="text-sm leading-relaxed text-zinc-200">{lead}</p>
@@ -84,7 +84,7 @@ function Assistant({
               className="flex items-start gap-2.5 text-[13px] leading-relaxed text-zinc-300"
             >
               <Check
-                className="mt-0.5 h-3.5 w-3.5 shrink-0 text-indigo-300"
+                className="mt-0.5 h-3.5 w-3.5 shrink-0 text-slate-300"
                 strokeWidth={2.5}
               />
               {p}
@@ -92,7 +92,7 @@ function Assistant({
           ))}
         </ul>
         {close && (
-          <p className="mt-3 font-(family-name:--font-display) text-sm font-medium text-indigo-300">
+          <p className="mt-3 font-(family-name:--font-display) text-sm font-medium text-slate-300">
             {close}
           </p>
         )}
@@ -165,7 +165,7 @@ export default function AIDemo() {
   }, [phase, c]);
 
   return (
-    <div className="glass glass-edge w-full max-w-md rounded-2xl p-1.5 shadow-[0_20px_70px_-25px_rgba(124,138,255,0.6)]">
+    <div className="glass glass-edge w-full max-w-md rounded-2xl p-1.5 shadow-[0_20px_70px_-25px_rgba(203, 213, 225,0.6)]">
       {/* window title bar */}
       <div className="flex items-center gap-2 border-b border-white/5 px-4 py-2.5">
         <span className="h-3 w-3 rounded-full bg-[#ff5f56]" />
@@ -175,8 +175,8 @@ export default function AIDemo() {
 
       {/* assistant header */}
       <div className="flex items-center gap-2.5 px-4 py-3">
-        <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-indigo-500/20 ring-1 ring-indigo-400/30">
-          <Sparkles className="h-3.5 w-3.5 text-indigo-300" />
+        <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-slate-500/20 ring-1 ring-slate-400/30">
+          <Sparkles className="h-3.5 w-3.5 text-slate-300" />
         </span>
         <div className="leading-tight">
           <p className="font-(family-name:--font-display) text-sm font-semibold text-zinc-100">
@@ -211,14 +211,14 @@ export default function AIDemo() {
             animate={{ opacity: 1 }}
             className="flex gap-2.5"
           >
-            <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-indigo-500/20 ring-1 ring-indigo-400/30">
-              <Sparkles className="h-3.5 w-3.5 text-indigo-300" />
+            <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-500/20 ring-1 ring-slate-400/30">
+              <Sparkles className="h-3.5 w-3.5 text-slate-300" />
             </span>
             <div className="flex items-center gap-1 rounded-2xl rounded-tl-md bg-white/[0.04] px-4 py-3.5 ring-1 ring-white/10">
               {[0, 1, 2].map((d) => (
                 <motion.span
                   key={d}
-                  className="h-1.5 w-1.5 rounded-full bg-indigo-300"
+                  className="h-1.5 w-1.5 rounded-full bg-slate-300"
                   animate={{ opacity: [0.3, 1, 0.3] }}
                   transition={{ duration: 1, repeat: Infinity, delay: d * 0.18 }}
                 />

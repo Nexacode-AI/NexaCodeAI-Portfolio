@@ -40,7 +40,7 @@ export default function About() {
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((s, i) => (
           <Reveal key={s.label} delay={i * 0.12}>
-            <div className="glass glass-edge rounded-3xl p-7 transition-shadow duration-300 hover:shadow-[0_0_36px_-8px_rgba(124,138,255,0.35)]">
+            <div className="glass glass-edge rounded-3xl p-7 transition-shadow duration-300 hover:shadow-[0_0_36px_-8px_rgba(203, 213, 225,0.35)]">
               <p className="accent-text font-(family-name:--font-display) text-4xl font-bold">
                 <Counter to={s.to} suffix={s.suffix} />
               </p>

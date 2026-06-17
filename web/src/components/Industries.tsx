@@ -29,7 +29,7 @@ export default function Industries() {
         {industries.map((name, i) => (
           <Reveal key={name} delay={(i % 2) * 0.1} y={24}>
             <div className="glass glass-edge group flex items-center gap-5 rounded-2xl px-6 py-5 transition-colors duration-300 hover:bg-white/[0.07]">
-              <span className="font-(family-name:--font-display) text-sm tabular-nums text-zinc-600 transition-colors group-hover:text-indigo-300">
+              <span className="font-(family-name:--font-display) text-sm tabular-nums text-zinc-600 transition-colors group-hover:text-slate-300">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <span className="h-8 w-px bg-white/10" />

@@ -50,7 +50,7 @@ const services = [
 ];
 
 const cardClass =
-  "glass glass-edge group h-full rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.07] hover:border-indigo-400/30 hover:shadow-[0_0_40px_-10px_rgba(124,138,255,0.4)]";
+  "glass glass-edge group h-full rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.07] hover:border-slate-400/30 hover:shadow-[0_0_40px_-10px_rgba(203, 213, 225,0.4)]";
 
 export default function Services() {
   return (
@@ -71,12 +71,12 @@ export default function Services() {
           <div className={`${cardClass} relative overflow-hidden`}>
             <div
               aria-hidden
-              className="pointer-events-none absolute -top-20 -right-10 h-56 w-56 rounded-full bg-indigo-500/15 blur-[80px] transition-opacity duration-300 group-hover:opacity-150"
+              className="pointer-events-none absolute -top-20 -right-10 h-56 w-56 rounded-full bg-slate-500/15 blur-[80px] transition-opacity duration-300 group-hover:opacity-150"
             />
             <div className="relative flex h-full flex-col">
               <div className="mb-5 inline-flex w-fit rounded-2xl glass-bright p-3 transition-transform duration-300 group-hover:scale-110">
                 <featured.icon
-                  className="h-6 w-6 text-indigo-300"
+                  className="h-6 w-6 text-slate-300"
                   strokeWidth={1.5}
                 />
               </div>
@@ -92,7 +92,7 @@ export default function Services() {
                     key={b}
                     className="flex items-center gap-2.5 text-sm text-zinc-300"
                   >
-                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-400 shadow-[0_0_8px_2px_rgba(124,138,255,0.5)]" />
+                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400 shadow-[0_0_8px_2px_rgba(203, 213, 225,0.5)]" />
                     {b}
                   </li>
                 ))}
@@ -105,7 +105,7 @@ export default function Services() {
           <Reveal key={s.title} delay={(i % 2) * 0.1}>
             <div className={cardClass}>
               <div className="mb-5 inline-flex rounded-2xl glass-bright p-3 transition-transform duration-300 group-hover:scale-110">
-                <s.icon className="h-5 w-5 text-indigo-300" strokeWidth={1.5} />
+                <s.icon className="h-5 w-5 text-slate-300" strokeWidth={1.5} />
               </div>
               <h3 className="font-(family-name:--font-display) text-lg font-semibold text-zinc-100">
                 {s.title}

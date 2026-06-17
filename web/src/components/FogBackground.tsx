@@ -31,7 +31,7 @@ export default function FogBackground() {
           bottom: "-25vh",
           left: "15vw",
           background:
-            "radial-gradient(circle, rgba(124,138,255,0.08), transparent 65%)",
+            "radial-gradient(circle, rgba(203, 213, 225,0.08), transparent 65%)",
         }}
       />
       <div
@@ -42,7 +42,7 @@ export default function FogBackground() {
           top: "60vh",
           left: "-12vw",
           background:
-            "radial-gradient(circle, rgba(94,106,210,0.09), transparent 65%)",
+            "radial-gradient(circle, rgba(148, 163, 184,0.09), transparent 65%)",
         }}
       />
     </div>

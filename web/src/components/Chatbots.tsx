@@ -57,9 +57,9 @@ export default function Chatbots() {
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {bots.map((b, i) => (
           <Reveal key={b.name} delay={(i % 3) * 0.1}>
-            <div className="glass glass-edge group flex h-full flex-col rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.07] hover:border-indigo-400/30 hover:shadow-[0_0_40px_-10px_rgba(124,138,255,0.4)]">
+            <div className="glass glass-edge group flex h-full flex-col rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.07] hover:border-slate-400/30 hover:shadow-[0_0_40px_-10px_rgba(203, 213, 225,0.4)]">
               <div className="mb-5 inline-flex w-fit rounded-2xl glass-bright p-3 transition-transform duration-300 group-hover:scale-110">
-                <b.icon className="h-5 w-5 text-indigo-300" strokeWidth={1.5} />
+                <b.icon className="h-5 w-5 text-slate-300" strokeWidth={1.5} />
               </div>
               <h3 className="font-(family-name:--font-display) text-lg font-semibold text-zinc-100">
                 {b.name}

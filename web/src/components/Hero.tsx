@@ -31,7 +31,7 @@ export default function Hero() {
             top: "18%",
             left: "56%",
             background:
-              "radial-gradient(circle, rgba(124,138,255,0.40), transparent 66%)",
+              "radial-gradient(circle, rgba(203, 213, 225,0.40), transparent 66%)",
           }}
         />
         <div
@@ -42,7 +42,7 @@ export default function Hero() {
             top: "0%",
             left: "70%",
             background:
-              "radial-gradient(circle, rgba(94,106,210,0.30), transparent 68%)",
+              "radial-gradient(circle, rgba(148, 163, 184,0.30), transparent 68%)",
           }}
         />
         <div
@@ -53,7 +53,7 @@ export default function Hero() {
             top: "26%",
             left: "-8%",
             background:
-              "radial-gradient(circle, rgba(139,149,240,0.18), transparent 70%)",
+              "radial-gradient(circle, rgba(226, 232, 240,0.18), transparent 70%)",
           }}
         />
       </div>
@@ -79,7 +79,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-6 inline-flex items-center gap-2 rounded-full glass glass-edge px-4 py-1.5 text-xs uppercase tracking-[0.25em] text-zinc-400"
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-indigo-300 shadow-[0_0_8px_2px_rgba(124,138,255,0.7)]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-slate-300 shadow-[0_0_8px_2px_rgba(203, 213, 225,0.7)]" />
             GPT · LLMs · Agentic AI
           </motion.p>
 

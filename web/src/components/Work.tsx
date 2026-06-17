@@ -61,7 +61,7 @@ export default function Work() {
             <div className="relative grid items-center gap-10 lg:grid-cols-[1.2fr_1fr]">
               <div>
                 <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-1.5 text-xs uppercase tracking-[0.25em] text-zinc-400">
-                  <GraduationCap className="h-3.5 w-3.5 text-indigo-300" />
+                  <GraduationCap className="h-3.5 w-3.5 text-slate-300" />
                   Education · Web Platform
                 </p>
                 <h3 className="font-(family-name:--font-display) text-3xl font-semibold tracking-tight text-zinc-100 sm:text-4xl">
@@ -129,7 +129,7 @@ export default function Work() {
             <div className="glass glass-edge flex h-full items-center gap-4 rounded-3xl px-6 py-6 transition-colors duration-300 hover:bg-white/[0.07]">
               <div className="rounded-2xl glass-bright p-3">
                 <u.icon
-                  className="h-5 w-5 text-indigo-300"
+                  className="h-5 w-5 text-slate-300"
                   strokeWidth={1.5}
                 />
               </div>

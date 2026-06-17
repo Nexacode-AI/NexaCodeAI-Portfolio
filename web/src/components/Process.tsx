@@ -46,11 +46,11 @@ export default function Process() {
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {steps.map((s, i) => (
           <Reveal key={s.title} delay={i * 0.12}>
-            <div className="glass glass-edge group relative h-full rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.07] hover:border-indigo-400/30">
+            <div className="glass glass-edge group relative h-full rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.07] hover:border-slate-400/30">
               <div className="mb-5 flex items-center justify-between">
                 <div className="inline-flex rounded-2xl glass-bright p-3 transition-transform duration-300 group-hover:scale-110">
                   <s.icon
-                    className="h-5 w-5 text-indigo-300"
+                    className="h-5 w-5 text-slate-300"
                     strokeWidth={1.5}
                   />
                 </div>

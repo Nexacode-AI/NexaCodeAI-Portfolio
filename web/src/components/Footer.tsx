@@ -53,7 +53,7 @@ export default function Footer() {
               href="mailto:nexacode.ai@gmail.com"
               className="mt-5 inline-flex items-center gap-2 text-sm text-zinc-300 transition-colors hover:text-white"
             >
-              <Mail className="h-4 w-4 text-indigo-300" />
+              <Mail className="h-4 w-4 text-slate-300" />
               nexacode.ai@gmail.com
             </a>
           </div>

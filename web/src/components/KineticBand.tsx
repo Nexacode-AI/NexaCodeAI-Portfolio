@@ -39,7 +39,7 @@ export default function KineticBand({
         {sequence.map((w, i) => (
           <span key={i} className={styles[i % styles.length]}>
             {w}
-            <span className="mx-[0.25em] text-indigo-400/60">·</span>
+            <span className="mx-[0.25em] text-slate-400/60">·</span>
           </span>
         ))}
       </motion.div>

@@ -57,7 +57,7 @@ function Item({
         <motion.span
           animate={{ rotate: open ? 45 : 0 }}
           transition={{ duration: 0.25 }}
-          className="shrink-0 text-indigo-300"
+          className="shrink-0 text-slate-300"
         >
           <Plus className="h-5 w-5" />
         </motion.span>

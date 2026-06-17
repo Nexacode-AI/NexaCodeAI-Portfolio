@@ -10,8 +10,8 @@ html {
 }
 
 body {
-  background: #0a0a0b;
-  color: #f4f4f5;
+  background: #0a0c0d;
+  color: #f4f5f6;
   font-family: var(--font-body), sans-serif;
   overflow-x: hidden;
 }
@@ -124,21 +124,21 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* ---------- indigo accent system (matches the brand mark) ---------- */
+/* ---------- platinum / slate accent system (the logo's own tones) ---------- */
 
 :root {
-  --accent: #7c8aff;
-  --accent-soft: #a5b4ff;
-  --accent-deep: #5e6ad2;
-  --accent-glow: rgba(124, 138, 255, 0.35);
+  --accent: #cbd5e1;
+  --accent-soft: #ffffff;
+  --accent-deep: #94a3b8;
+  --accent-glow: rgba(203, 213, 225, 0.3);
 }
 
 .accent-text {
-  background: linear-gradient(105deg, #aab6ff, #818cf8 55%, #6366f1);
+  background: linear-gradient(105deg, #ffffff, #cbd5e1 55%, #94a3b8);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.25));
+  filter: drop-shadow(0 0 12px rgba(203, 213, 225, 0.22));
 }
 
 /* outlined word for kinetic typography */
@@ -148,7 +148,7 @@ body {
 }
 .stroke-text-accent {
   color: transparent;
-  -webkit-text-stroke: 1px rgba(124, 138, 255, 0.55);
+  -webkit-text-stroke: 1px rgba(203, 213, 225, 0.55);
 }
 
 /* ---------- aurora glow (premium ambient motion) ---------- */
