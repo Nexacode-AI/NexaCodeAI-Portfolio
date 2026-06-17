@@ -124,14 +124,21 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* ---------- emerald accent system ---------- */
+/* ---------- indigo accent system (matches the brand mark) ---------- */
+
+:root {
+  --accent: #7c8aff;
+  --accent-soft: #a5b4ff;
+  --accent-deep: #5e6ad2;
+  --accent-glow: rgba(124, 138, 255, 0.35);
+}
 
 .accent-text {
-  background: linear-gradient(100deg, #d1fae5, #34d399 45%, #059669);
+  background: linear-gradient(105deg, #aab6ff, #818cf8 55%, #6366f1);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 0 18px rgba(52, 211, 153, 0.35));
+  filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.25));
 }
 
 /* outlined word for kinetic typography */
@@ -139,28 +146,44 @@ body {
   color: transparent;
   -webkit-text-stroke: 1px rgba(244, 244, 245, 0.3);
 }
-.stroke-text-green {
+.stroke-text-accent {
   color: transparent;
-  -webkit-text-stroke: 1px rgba(52, 211, 153, 0.55);
+  -webkit-text-stroke: 1px rgba(124, 138, 255, 0.55);
 }
 
-/* shooting meteors */
-@keyframes meteor {
-  0% { transform: translate(0, 0) rotate(-25deg); opacity: 0; }
-  8% { opacity: 1; }
-  60%, 100% { transform: translate(-55vw, 38vh) rotate(-25deg); opacity: 0; }
+/* ---------- aurora glow (premium ambient motion) ---------- */
+@keyframes aurora-drift-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(7%, -9%) scale(1.18); }
 }
-.meteor {
+@keyframes aurora-drift-2 {
+  0%, 100% { transform: translate(0, 0) scale(1.1); }
+  50% { transform: translate(-9%, 7%) scale(0.92); }
+}
+@keyframes aurora-breathe {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 0.75; }
+}
+.aurora {
   position: absolute;
-  width: 170px;
-  height: 1.5px;
   border-radius: 9999px;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0.9)
-  );
-  animation: meteor 7s linear infinite;
+  filter: blur(80px);
+  will-change: transform, opacity;
+}
+.aurora-1 {
+  animation:
+    aurora-drift-1 20s ease-in-out infinite,
+    aurora-breathe 9s ease-in-out infinite;
+}
+.aurora-2 {
+  animation:
+    aurora-drift-2 26s ease-in-out infinite,
+    aurora-breathe 11s ease-in-out infinite;
+}
+.aurora-3 {
+  animation:
+    aurora-drift-1 32s ease-in-out infinite reverse,
+    aurora-breathe 13s ease-in-out infinite;
 }
 
 /* flowing dashed chart lines */
@@ -178,20 +201,6 @@ body {
     linear-gradient(rgba(244, 244, 245, 0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(244, 244, 245, 0.04) 1px, transparent 1px);
   background-size: 56px 56px;
-}
-
-/* slow pulsing glow ring */
-@keyframes ring-pulse {
-  0%, 100% { transform: scale(1); opacity: 0.55; }
-  50% { transform: scale(1.06); opacity: 0.9; }
-}
-.glow-ring {
-  border-radius: 9999px;
-  border: 1px solid rgba(52, 211, 153, 0.35);
-  box-shadow:
-    0 0 40px rgba(52, 211, 153, 0.25),
-    inset 0 0 40px rgba(52, 211, 153, 0.15);
-  animation: ring-pulse 5s ease-in-out infinite;
 }
 
 /* ---------- inverted (light) section ---------- */
@@ -237,4 +246,38 @@ body {
 }
 .marquee-reverse {
   animation: marquee 42s linear infinite reverse;
+}
+
+/* ---------- logo: render dark mark as light on dark UI ---------- */
+.logo-light {
+  filter: brightness(0) invert(1);
+}
+
+/* ---------- live AI demo terminal ---------- */
+@keyframes caret-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.caret {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  background: var(--accent);
+  animation: caret-blink 1s step-end infinite;
+}
+
+/* slow conic shimmer used behind premium cards */
+@keyframes shimmer-rotate {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

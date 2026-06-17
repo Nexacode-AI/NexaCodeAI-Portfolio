@@ -31,7 +31,7 @@ export default function FogBackground() {
           bottom: "-25vh",
           left: "15vw",
           background:
-            "radial-gradient(circle, rgba(52,211,153,0.07), transparent 65%)",
+            "radial-gradient(circle, rgba(124,138,255,0.08), transparent 65%)",
         }}
       />
       <div
@@ -42,19 +42,7 @@ export default function FogBackground() {
           top: "60vh",
           left: "-12vw",
           background:
-            "radial-gradient(circle, rgba(52,211,153,0.08), transparent 65%)",
-        }}
-      />
-      {/* horizon sphere glow, like the planet curve in the reference */}
-      <div
-        className="absolute left-1/2 -translate-x-1/2 rounded-[100%]"
-        style={{
-          width: "140vw",
-          height: "60vh",
-          bottom: "-50vh",
-          background:
-            "radial-gradient(ellipse at center top, rgba(110,231,183,0.10), transparent 60%)",
-          boxShadow: "0 -1px 90px rgba(52,211,153,0.12)",
+            "radial-gradient(circle, rgba(94,106,210,0.09), transparent 65%)",
         }}
       />
     </div>

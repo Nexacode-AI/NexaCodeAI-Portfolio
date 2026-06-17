@@ -1,14 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const links = [
-  { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Stack", href: "#stack" },
-  { label: "Industries", href: "#industries" },
+  { label: "Process", href: "#process" },
   { label: "Work", href: "#work" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 export default function Navbar() {
@@ -22,9 +23,20 @@ export default function Navbar() {
       <nav className="glass glass-edge flex items-center gap-1 rounded-full py-1.5 pl-5 pr-1.5">
         <a
           href="#home"
-          className="mr-3 font-(family-name:--font-display) text-sm font-bold tracking-tight text-zinc-100"
+          className="mr-3 flex items-center gap-2 font-(family-name:--font-display) text-sm font-bold tracking-tight text-zinc-100"
         >
-          nexacode<span className="text-zinc-500">.ai</span>
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-white shadow-[0_2px_10px_-2px_rgba(0,0,0,0.5)]">
+            <Image
+              src="/logo.png"
+              alt="Nexacode AI"
+              width={24}
+              height={24}
+              priority
+            />
+          </span>
+          <span className="text-base">
+            nexacode<span className="text-zinc-500">.ai</span>
+          </span>
         </a>
         <ul className="hidden items-center md:flex">
           {links.map((l) => (

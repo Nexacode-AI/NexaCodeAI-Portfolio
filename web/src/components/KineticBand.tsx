@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-const styles = ["text-zinc-100", "stroke-text", "accent-text", "stroke-text-green"];
+const styles = ["text-zinc-100", "stroke-text", "accent-text", "stroke-text-accent"];
 
 /**
  * Giant kinetic typography band — huge words slide horizontally,
@@ -39,7 +39,7 @@ export default function KineticBand({
         {sequence.map((w, i) => (
           <span key={i} className={styles[i % styles.length]}>
             {w}
-            <span className="mx-[0.25em] text-emerald-400/60">·</span>
+            <span className="mx-[0.25em] text-indigo-400/60">·</span>
           </span>
         ))}
       </motion.div>

@@ -5,6 +5,7 @@ import {
   MessageSquare,
   ShoppingBag,
 } from "lucide-react";
+import Image from "next/image";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
@@ -60,7 +61,7 @@ export default function Work() {
             <div className="relative grid items-center gap-10 lg:grid-cols-[1.2fr_1fr]">
               <div>
                 <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-1.5 text-xs uppercase tracking-[0.25em] text-zinc-400">
-                  <GraduationCap className="h-3.5 w-3.5 text-emerald-300" />
+                  <GraduationCap className="h-3.5 w-3.5 text-indigo-300" />
                   Education · Web Platform
                 </p>
                 <h3 className="font-(family-name:--font-display) text-3xl font-semibold tracking-tight text-zinc-100 sm:text-4xl">
@@ -89,21 +90,31 @@ export default function Work() {
                 </div>
               </div>
 
-              {/* minimal browser-frame mock */}
+              {/* browser frame with a live screenshot preview */}
               <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-3">
                 <div className="mb-3 flex items-center gap-2 px-1">
-                  <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
+                  <span className="h-3 w-3 rounded-full bg-[#ff5f56]" />
+                  <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
+                  <span className="h-3 w-3 rounded-full bg-[#28c840]" />
                   <span className="ml-3 flex-1 truncate rounded-full bg-white/5 px-4 py-1 text-[11px] text-zinc-500">
                     pusattuisyensericakra.com
                   </span>
                 </div>
-                <div className="flex h-44 items-center justify-center rounded-xl bg-gradient-to-br from-white/10 to-white/[0.02]">
-                  <span className="inline-flex items-center gap-2 text-sm text-zinc-300">
-                    Visit live site
-                    <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </span>
+                <div className="relative overflow-hidden rounded-xl">
+                  <Image
+                    src="/work/pusat-tuisyen.jpg"
+                    alt="Pusat Tuisyen Seri Cakra website preview"
+                    width={1200}
+                    height={769}
+                    className="w-full transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                  {/* hover overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-zinc-950/0 opacity-0 backdrop-blur-[1px] transition-all duration-300 group-hover:bg-zinc-950/40 group-hover:opacity-100">
+                    <span className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-zinc-950">
+                      Visit live site
+                      <ArrowUpRight className="h-4 w-4" />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -118,7 +129,7 @@ export default function Work() {
             <div className="glass glass-edge flex h-full items-center gap-4 rounded-3xl px-6 py-6 transition-colors duration-300 hover:bg-white/[0.07]">
               <div className="rounded-2xl glass-bright p-3">
                 <u.icon
-                  className="h-5 w-5 text-emerald-300"
+                  className="h-5 w-5 text-indigo-300"
                   strokeWidth={1.5}
                 />
               </div>
