@@ -35,6 +35,11 @@ export default function Contact() {
     setSubmitted(true);
   }
 
+  function resetForm() {
+    setFiles([]);
+    setSubmitted(false);
+  }
+
   return (
     <section id="contact" className="relative mx-auto max-w-6xl px-6 py-32">
       <SectionHeading
@@ -78,6 +83,14 @@ export default function Contact() {
                   nexacode.ai@gmail.com
                 </a>
               </p>
+              <button
+                type="button"
+                onClick={resetForm}
+                className="group mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-zinc-100 px-8 py-4 text-sm font-medium text-zinc-950 transition-transform hover:scale-[1.03]"
+              >
+                Send another request
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </button>
             </motion.div>
           ) : (
             <div className="grid gap-5">
