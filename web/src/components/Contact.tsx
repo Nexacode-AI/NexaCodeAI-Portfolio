@@ -22,6 +22,8 @@ const inputClass =
 export default function Contact() {
   const [files, setFiles] = useState<File[]>([]);
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const fileInput = useRef<HTMLInputElement>(null);
 
   function addFiles(list: FileList | null) {
@@ -29,10 +31,40 @@ export default function Contact() {
     setFiles((prev) => [...prev, ...Array.from(list)]);
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // TODO Phase 2: send via Resend (with attachments) from a Server Action
-    setSubmitted(true);
+    setError(null);
+    setSending(true);
+
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+    if (!accessKey) {
+      setSending(false);
+      setError("Form is not configured yet. Please email us directly.");
+      return;
+    }
+
+    const data = new FormData(e.currentTarget);
+    data.append("access_key", accessKey);
+    data.append("subject", "New project request — NexaCode.AI");
+    data.append("from_name", "NexaCode.AI Website");
+    files.forEach((file) => data.append("attachment", file));
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: data,
+      });
+      const result = await res.json();
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        setError(result.message || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setError("Network error. Please try again or email us directly.");
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -169,11 +201,18 @@ export default function Contact() {
                 )}
               </div>
 
+              {error && (
+                <p className="text-sm text-red-400" role="alert">
+                  {error}
+                </p>
+              )}
+
               <button
                 type="submit"
-                className="group mt-2 inline-flex items-center justify-center gap-2 self-start rounded-full bg-zinc-100 px-8 py-4 text-sm font-medium text-zinc-950 transition-transform hover:scale-[1.03]"
+                disabled={sending}
+                className="group mt-2 inline-flex items-center justify-center gap-2 self-start rounded-full bg-zinc-100 px-8 py-4 text-sm font-medium text-zinc-950 transition-transform hover:scale-[1.03] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:scale-100"
               >
-                Send Request
+                {sending ? "Sending…" : "Send Request"}
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </button>
             </div>
