@@ -4,7 +4,7 @@ Marketing site for **NexaCode.AI**, an AI product studio. A single-page,
 animated Next.js site covering services, process, work, and a project-request
 contact form.
 
-🔗 **Live:** https://nexa-code-ai-portfolio.vercel.app
+🔗 **Live:** https://nexacodeai.org/
 
 ## Tech stack
 
