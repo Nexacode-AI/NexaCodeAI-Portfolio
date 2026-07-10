@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, Paperclip, X } from "lucide-react";
-import { useRef, useState } from "react";
+import { ArrowUpRight } from "lucide-react";
+import { useState } from "react";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
@@ -20,16 +20,9 @@ const inputClass =
   "w-full rounded-2xl glass px-5 py-4 text-sm text-zinc-100 placeholder-zinc-500 outline-none transition-colors focus:border-white/30";
 
 export default function Contact() {
-  const [files, setFiles] = useState<File[]>([]);
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const fileInput = useRef<HTMLInputElement>(null);
-
-  function addFiles(list: FileList | null) {
-    if (!list) return;
-    setFiles((prev) => [...prev, ...Array.from(list)]);
-  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -47,7 +40,6 @@ export default function Contact() {
     data.append("access_key", accessKey);
     data.append("subject", "New project request — NexaCode.AI");
     data.append("from_name", "NexaCode.AI Website");
-    files.forEach((file) => data.append("attachment", file));
 
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
@@ -68,7 +60,7 @@ export default function Contact() {
   }
 
   function resetForm() {
-    setFiles([]);
+    setError(null);
     setSubmitted(false);
   }
 
@@ -86,8 +78,8 @@ export default function Contact() {
         }
       >
         <p>
-          Fill in the form and our team will get back to you. Attach briefs,
-          specs, or anything that helps us understand your vision.
+          Fill in the form and our team will get back to you. Tell us about your
+          goals, scope, and timeline so we understand your vision.
         </p>
       </SectionHeading>
 
@@ -170,49 +162,6 @@ export default function Contact() {
                 placeholder="Describe your project — goals, scope, timeline…"
                 className={`${inputClass} resize-none`}
               />
-
-              {/* file attachments */}
-              <div>
-                <input
-                  ref={fileInput}
-                  type="file"
-                  multiple
-                  hidden
-                  onChange={(e) => addFiles(e.target.files)}
-                />
-                <button
-                  type="button"
-                  onClick={() => fileInput.current?.click()}
-                  className="glass inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm text-zinc-300 transition-colors hover:text-white"
-                >
-                  <Paperclip className="h-4 w-4" />
-                  Attach files
-                </button>
-                {files.length > 0 && (
-                  <ul className="mt-3 flex flex-wrap gap-2">
-                    {files.map((f, i) => (
-                      <li
-                        key={`${f.name}-${i}`}
-                        className="glass flex items-center gap-2 rounded-full px-4 py-1.5 text-xs text-zinc-300"
-                      >
-                        {f.name}
-                        <button
-                          type="button"
-                          aria-label={`Remove ${f.name}`}
-                          onClick={() =>
-                            setFiles((prev) =>
-                              prev.filter((_, idx) => idx !== i),
-                            )
-                          }
-                          className="text-zinc-500 hover:text-white"
-                        >
-                          <X className="h-3.5 w-3.5" />
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
 
               {error && (
                 <p className="text-sm text-red-400" role="alert">
