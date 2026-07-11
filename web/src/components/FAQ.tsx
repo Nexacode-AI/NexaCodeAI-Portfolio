@@ -9,7 +9,7 @@ import SectionHeading from "./SectionHeading";
 const faqs = [
   {
     q: "What kinds of AI projects do you take on?",
-    a: "AI chatbots and GPT assistants, RAG and document systems, agentic AI workflows, LLM-powered apps, AI websites and SaaS platforms, and WhatsApp/workflow automation — end to end, from idea to deployment.",
+    a: "AI chatbots and GPT assistants, RAG and document systems, agentic AI workflows, LLM-powered apps, AI websites and SaaS platforms, and WhatsApp/workflow automation. We handle it end to end, from idea to deployment.",
   },
   {
     q: "Which technologies do you build with?",
@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: "Do you offer a free consultation?",
-    a: "Yes. Message us with your idea before committing to anything — we'll discuss scope, approach, and feasibility at no cost.",
+    a: "Yes. Message us with your idea before you commit to anything, and we'll talk through scope, approach, and feasibility at no cost.",
   },
   {
     q: "Can you deploy and host the solution for us?",
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "Will the code and solution be ours?",
-    a: "Yes — you get clean, scalable, well-structured code and full ownership of the solution we build for you.",
+    a: "Yes. You get clean, scalable, well-structured code and full ownership of everything we build for you.",
   },
   {
     q: "Do you provide support after launch?",

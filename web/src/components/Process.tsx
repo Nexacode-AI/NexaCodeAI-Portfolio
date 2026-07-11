@@ -11,7 +11,7 @@ const steps = [
   {
     icon: Cpu,
     title: "Architecture",
-    desc: "We design the system — models, data, agents, and integrations — before writing code.",
+    desc: "Before we write any code, we design the system: models, data, agents, and integrations.",
   },
   {
     icon: Wrench,
@@ -21,7 +21,7 @@ const steps = [
   {
     icon: Rocket,
     title: "Deploy & Optimize",
-    desc: "Ship to AWS, Azure, or GCP — then monitor, fine-tune, and support in production.",
+    desc: "We ship to AWS, Azure, or GCP, then monitor, fine-tune, and support it in production.",
   },
 ];
 

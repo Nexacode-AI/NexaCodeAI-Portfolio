@@ -58,7 +58,7 @@ export default function Hero() {
         />
       </div>
 
-      {/* giant ghosted brand word — subtle watermark behind the headline */}
+      {/* giant ghosted brand word: subtle watermark behind the headline */}
       <motion.span
         aria-hidden
         style={{ y: backdropY }}
@@ -99,7 +99,7 @@ export default function Hero() {
             className="mx-auto mt-6 max-w-lg text-base text-zinc-400 sm:text-lg lg:mx-0"
           >
             Custom AI chatbots, RAG systems, agentic workflows, LLM apps, and
-            WhatsApp automation — full-stack and deployment-ready, from idea
+            WhatsApp automation. Full-stack and deployment-ready, from idea
             validation to production.
           </motion.p>
 
@@ -130,7 +130,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.9 }}
             className="mt-5 text-xs text-zinc-500"
           >
-            Free consultation before you commit — just tell us your idea.
+            Free consultation before you commit. Just tell us your idea.
           </motion.p>
         </div>
 

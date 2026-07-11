@@ -12,7 +12,7 @@ import SectionHeading from "./SectionHeading";
 const featured = {
   icon: Bot,
   title: "Agentic AI Systems",
-  desc: "Autonomous agents that reason, plan, and act across your tools — built with LangGraph, CrewAI, and AutoGen.",
+  desc: "Autonomous agents that reason, plan, and act across your tools, built with LangGraph, CrewAI, and AutoGen.",
   bullets: [
     "Multi-agent orchestration",
     "Tool, API & database calling",

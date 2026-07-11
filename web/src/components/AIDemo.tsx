@@ -9,7 +9,7 @@ type Convo = { q: string; lead: string; points: string[]; close: string };
 const convos: Convo[] = [
   {
     q: "How do I add AI to my online store?",
-    lead: "We'd build a GPT assistant trained on your catalog —",
+    lead: "We'd build a GPT assistant trained on your catalog:",
     points: [
       "Answers product questions in real time",
       "Plugs into WhatsApp and your website",
@@ -19,7 +19,7 @@ const convos: Convo[] = [
   },
   {
     q: "Can you turn our internal docs into a chatbot?",
-    lead: "Yes — a RAG system built over your documents:",
+    lead: "Yes, a RAG system built over your documents:",
     points: [
       "Ingests and embeds all your docs",
       "Answers accurately, with citations",
