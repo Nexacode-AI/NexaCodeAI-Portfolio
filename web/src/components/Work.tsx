@@ -69,7 +69,7 @@ export default function Work() {
                 </h3>
                 <p className="mt-4 max-w-xl leading-relaxed text-zinc-400">
                   A complete digital platform for Seremban&apos;s trusted
-                  tuition centre — an integrated portal where students,
+                  tuition centre. It&apos;s an integrated portal where students,
                   parents, and teachers manage academic progress, attendance,
                   fees, and communication.
                 </p>

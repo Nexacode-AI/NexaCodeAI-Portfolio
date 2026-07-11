@@ -6,7 +6,7 @@ import { useRef } from "react";
 const styles = ["text-zinc-100", "stroke-text", "accent-text", "stroke-text-accent"];
 
 /**
- * Giant kinetic typography band — huge words slide horizontally,
+ * Giant kinetic typography band: huge words slide horizontally,
  * driven by scroll position, like the reference video.
  */
 export default function KineticBand({

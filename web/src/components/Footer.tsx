@@ -46,8 +46,8 @@ export default function Footer() {
               </span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-zinc-500">
-              Production-grade AI chatbots, agentic systems, and full-stack apps
-              — from idea validation to deployment.
+              Production-grade AI chatbots, agentic systems, and full-stack
+              apps, from idea validation to deployment.
             </p>
             <a
               href="mailto:nexacode.ai@gmail.com"
@@ -85,7 +85,7 @@ export default function Footer() {
               Start a project
             </p>
             <p className="text-sm leading-relaxed text-zinc-400">
-              Tell us your idea — free consultation before you commit.
+              Tell us your idea. Free consultation before you commit.
             </p>
             <a
               href="#contact"

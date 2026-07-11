@@ -49,7 +49,7 @@ export default function Chatbots() {
         }
       >
         <p>
-          From simple rule-based assistants to fully autonomous agents — built
+          From simple rule-based assistants to fully autonomous agents, built
           on the channels and frameworks your users already live in.
         </p>
       </SectionHeading>

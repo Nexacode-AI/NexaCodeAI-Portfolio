@@ -38,7 +38,7 @@ export default function Contact() {
 
     const data = new FormData(e.currentTarget);
     data.append("access_key", accessKey);
-    data.append("subject", "New project request — NexaCode.AI");
+    data.append("subject", "New project request from the NexaCode.AI site");
     data.append("from_name", "NexaCode.AI Website");
 
     try {
@@ -159,7 +159,7 @@ export default function Contact() {
                 required
                 name="message"
                 rows={5}
-                placeholder="Describe your project — goals, scope, timeline…"
+                placeholder="Describe your project: goals, scope, and timeline…"
                 className={`${inputClass} resize-none`}
               />
 

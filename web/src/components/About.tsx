@@ -30,8 +30,9 @@ export default function About() {
           chatbots.
         </p>
         <p className="mt-4">
-          We&apos;re a full-stack AI team — from idea validation and system
-          architecture to deployment and optimization. Alongside AI, we build
+          We&apos;re a full-stack AI team that takes you from idea validation
+          and system architecture through to deployment and optimization.
+          Alongside AI, we build
           full-stack apps and WhatsApp automation, delivering clean, scalable,
           deployment-ready solutions with real-world impact.
         </p>
